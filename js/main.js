@@ -195,10 +195,18 @@ function renderDownload() {
         <a href="${doi}" target="_blank" rel="noopener" class="doi-link">${doi}</a>
       </div>
       <div class="logos-row">
-        <span class="logo-placeholder">NetLab UFRJ</span>
-        <span class="logo-placeholder">Minderoo Centre</span>
-        <span class="logo-placeholder">University of Cambridge</span>
-        <span class="logo-placeholder">UFRJ</span>
+        <a href="https://netlab.eco.ufrj.br/en" target="_blank" rel="noopener" class="logo-link">
+          <img src="Logos/Logo_Principal_Branco.png" alt="NetLab UFRJ" class="logo-img">
+        </a>
+        <a href="https://www.mctd.ac.uk/" target="_blank" rel="noopener" class="logo-link">
+          <img src="Logos/MINDEROO_logotipo_pb_branco.png" alt="Minderoo Centre" class="logo-img">
+        </a>
+        <a href="https://www.cam.ac.uk/" target="_blank" rel="noopener" class="logo-link">
+          <img src="Logos/CAMBRIDGE_logotipo_pb_branco.png" alt="University of Cambridge" class="logo-img">
+        </a>
+        <a href="https://ufrj.br" target="_blank" rel="noopener" class="logo-link">
+          <img src="Logos/ufrj-horizontal-negativa-completa-telas (1).png" alt="UFRJ" class="logo-img">
+        </a>
       </div>
     </div>
   `;

@@ -767,6 +767,11 @@ tr:hover .tier-cell .tier-label {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.logo-link { display: inline-flex; align-items: center; opacity: 0.7; transition: opacity 0.15s; }
+.logo-link:hover { opacity: 1; }
+.logo-img { height: 2rem; width: auto; }
+.logo-img[alt="NetLab UFRJ"] { height: 2.75rem; }
+.logo-img[alt="UFRJ"] { height: 3.5rem; }
 
 /* ─── Responsive ─── */
 @media (max-width: 768px) {
