@@ -491,6 +491,12 @@ section { scroll-margin-top: 3.5rem; }
   white-space: nowrap;
 }
 
+.heatmap-footnote {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
+
 .platform-name {
   display: flex;
   align-items: center;

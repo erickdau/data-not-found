@@ -72,6 +72,7 @@ export class Heatmap {
             </thead>
             <tbody id="${this.container.id}-tbody"></tbody>
           </table>
+          <p class="heatmap-footnote">† VLOP — Very Large Online Platform, as designated under the EU's Digital Services Act (DSA).</p>
         </div>
       </div>
     `;
