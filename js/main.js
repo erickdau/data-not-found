@@ -20,12 +20,7 @@ function renderHero() {
 
   section.innerHTML = `
     <p class="hero__eyebrow">${institution}</p>
-    <h1 class="hero__title">
-      ${title.map((line, i) => i === 0
-        ? `<span>${line}</span>`
-        : `<span style="color:#432c6e">${line}</span>`
-      ).join('')}
-    </h1>
+    <img src="Logos/data-not-foun_vertictal_branco.svg" alt="Data Not Found" class="hero__logo">
     <div class="hero__divider"></div>
     <p class="hero__subtitle">${subtitle}</p>
     <div class="hero__actions">
