@@ -170,9 +170,9 @@ export const content = {
       'Meaningful':    'Significativo',
       'Limited':       'Limitado',
       'Deficient':     'Insuficiente',
-      'Minimal':       'Mínimo',
+      'Minimal':       'Precário',
       'Negligible':    'Insignificante',
-      'Not Available': 'Não Disponível',
+      'Not Available': 'Indisponível',
     },
     regions: {
       brazil: 'Brasil',
