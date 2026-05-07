@@ -128,7 +128,6 @@ h3 {
 .nav-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   max-width: var(--container);
   margin-inline: auto;
   padding-inline: 2rem;
@@ -160,6 +159,11 @@ h3 {
   color: var(--text);
 }
 
+#nav-links {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -186,7 +190,11 @@ h3 {
 }
 
 @media (max-width: 768px) {
-  .nav-toggle { display: flex; }
+  .nav-toggle {
+    display: flex;
+    order: 1;
+    margin-left: auto;
+  }
 
   .nav-links {
     display: none;
@@ -217,6 +225,39 @@ h3 {
 
 /* Offset for fixed nav */
 section { scroll-margin-top: 3.5rem; }
+
+/* ─── Lang Switcher ─── */
+.lang-switcher {
+  display: flex;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.lang-switcher__btn {
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  transition: color 0.15s, background 0.15s;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.lang-switcher__btn[aria-pressed="true"] {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.lang-switcher__btn:hover:not([aria-pressed="true"]) {
+  color: rgba(255, 255, 255, 0.75);
+}
 
 /* ─── Hero ─── */
 #hero {
