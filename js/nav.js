@@ -2,30 +2,27 @@
 export function initNav() {
   const toggle = document.querySelector('.nav-toggle');
   const links = document.querySelector('#nav-links');
-  const navLinks = document.querySelectorAll('.nav-links a');
   const sections = document.querySelectorAll('section[id]');
 
-  // Mobile toggle
   toggle.addEventListener('click', () => {
     const expanded = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!expanded));
     links.classList.toggle('open', !expanded);
   });
 
-  // Close mobile menu on link click
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+  // Event delegation: handles clicks on current and future nav link elements
+  links.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
       toggle.setAttribute('aria-expanded', 'false');
       links.classList.remove('open');
-    });
+    }
   });
 
-  // Scroll spy
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        navLinks.forEach(link => link.classList.remove('active'));
+        document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
         const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
         if (active) active.classList.add('active');
       });
@@ -34,4 +31,29 @@ export function initNav() {
   );
 
   sections.forEach(s => observer.observe(s));
+}
+
+export function initLangSwitcher(currentLang) {
+  const navInner = document.querySelector('.nav-inner');
+  const pill = document.createElement('div');
+  pill.className = 'lang-switcher';
+  pill.setAttribute('role', 'group');
+  pill.setAttribute('aria-label', 'Language');
+  pill.innerHTML = `
+    <button class="lang-switcher__btn" data-lang="en" aria-pressed="${currentLang === 'en'}">EN</button>
+    <button class="lang-switcher__btn" data-lang="pt" aria-pressed="${currentLang === 'pt'}">PT</button>
+  `;
+  navInner.appendChild(pill);
+
+  pill.addEventListener('click', (e) => {
+    const btn = e.target.closest('.lang-switcher__btn');
+    if (!btn || btn.getAttribute('aria-pressed') === 'true') return;
+    window.__setLang(btn.dataset.lang);
+  });
+}
+
+export function updateLangPill(lang) {
+  document.querySelectorAll('.lang-switcher__btn').forEach(btn => {
+    btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
+  });
 }
