@@ -169,6 +169,7 @@ export const content = {
     all: 'All',
     sortBtn: '↕ Sort by score',
     platformCol: 'Platform',
+    vlopBadge: 'VLOP',
     footnote: '† VLOP — Very Large Online Platform, as designated under the EU\'s Digital Services Act (DSA).',
     tiers: {
       'Meaningful':    'Meaningful',

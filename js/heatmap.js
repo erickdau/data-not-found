@@ -97,7 +97,7 @@ export class Heatmap {
       `;
     }).join('');
 
-    const vlopBadge = platform.isVlop ? `<span class="vlop-badge">VLOP</span>` : '';
+    const vlopBadge = platform.isVlop ? `<span class="vlop-badge">${this.labels.vlopBadge}</span>` : '';
 
     return `
       <tr>

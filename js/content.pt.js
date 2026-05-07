@@ -165,7 +165,8 @@ export const content = {
     all: 'Todos',
     sortBtn: '↕ Ordenar por pontuação',
     platformCol: 'Plataforma',
-    footnote: '† VLOP — Plataforma Online Muito Grande (Very Large Online Platform), designada nos termos do Regulamento dos Serviços Digitais (DSA) da UE.',
+    vlopBadge: '*',
+    footnote: '* Plataforma Digital Muito Grande, designada nos termos da Lei de Serviços Digitais (DSA).',
     tiers: {
       'Meaningful':    'Significativo',
       'Limited':       'Limitado',
