@@ -34,6 +34,10 @@ export function initNav() {
 }
 
 export function initLangSwitcher(currentLang) {
+  if (document.querySelector('.lang-switcher')) {
+    updateLangPill(currentLang);
+    return;
+  }
   const navInner = document.querySelector('.nav-inner');
   const pill = document.createElement('div');
   pill.className = 'lang-switcher';
@@ -48,7 +52,9 @@ export function initLangSwitcher(currentLang) {
   pill.addEventListener('click', (e) => {
     const btn = e.target.closest('.lang-switcher__btn');
     if (!btn || btn.getAttribute('aria-pressed') === 'true') return;
-    window.__setLang(btn.dataset.lang);
+    if (typeof window.__setLang === 'function') {
+      window.__setLang(btn.dataset.lang);
+    }
   });
 }
 
