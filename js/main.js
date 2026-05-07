@@ -182,7 +182,7 @@ function renderRecommendations(content) {
 
 function renderDownload(content) {
   const section = document.getElementById('download');
-  const { eyebrow, title, button, pdfUrl, onlineEdition, onlineEditionLabel, citation, doi } = content.download;
+  const { eyebrow, title, button, pdfUrl, onlineEdition, onlineEditionLabel, citation, doi, citationLabel } = content.download;
 
   section.innerHTML = `
     <div class="container container--narrow section">
@@ -200,7 +200,7 @@ function renderDownload(content) {
         </a>
       </div>
       <div class="citation-block">
-        <p class="citation-block__label">How to cite</p>
+        <p class="citation-block__label">${citationLabel}</p>
         <p class="citation-block__text">${citation}</p>
         <a href="${doi}" target="_blank" rel="noopener" class="doi-link">${doi}</a>
       </div>
@@ -235,11 +235,17 @@ function renderAll(content) {
 }
 
 window.__setLang = async (lang) => {
-  localStorage.setItem('lang', lang);
-  document.documentElement.lang = lang;
-  const content = await loadContent(lang);
-  renderAll(content);
-  updateLangPill(lang);
+  if (window.__setLang._pending) return;
+  window.__setLang._pending = true;
+  try {
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+    const content = await loadContent(lang);
+    renderAll(content);
+    updateLangPill(lang);
+  } finally {
+    window.__setLang._pending = false;
+  }
 };
 
 document.addEventListener('DOMContentLoaded', async () => {

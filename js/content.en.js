@@ -167,6 +167,7 @@ export const content = {
 
   download: {
     eyebrow: 'Download & Cite',
+    citationLabel: 'How to cite',
     title: 'Access the full report',
     button: 'Download PDF',
     pdfUrl: 'https://github.com/NetLab-ECO-UFRJ/transparency_index/raw/main/report.pdf',
