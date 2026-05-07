@@ -1,11 +1,26 @@
 // js/main.js
-import { initNav } from './nav.js';
-import { content } from './content.en.js';
+import { initNav, initLangSwitcher, updateLangPill } from './nav.js';
 import { TIERS, TIER_COLORS, TIER_RANGE, platforms } from './data.js';
 import { Heatmap } from './heatmap.js';
 import { initRecommendations } from './recommendations.js';
 
-function renderNav() {
+async function loadContent(lang) {
+  try {
+    const mod = await import(lang === 'pt' ? './content.pt.js' : './content.en.js');
+    return mod.content;
+  } catch {
+    const mod = await import('./content.en.js');
+    return mod.content;
+  }
+}
+
+function resolveLang() {
+  const stored = localStorage.getItem('lang');
+  if (stored === 'en' || stored === 'pt') return stored;
+  return navigator.language.startsWith('pt') ? 'pt' : 'en';
+}
+
+function renderNav(content) {
   document.querySelector('.nav-logo').textContent = content.nav.logo;
   const navLinks = document.getElementById('nav-links');
   navLinks.innerHTML = content.nav.links
@@ -13,9 +28,9 @@ function renderNav() {
     .join('');
 }
 
-function renderHero() {
+function renderHero(content) {
   const section = document.getElementById('hero');
-  const { title, subtitle, institution, cta } = content.hero;
+  const { subtitle, institution, cta } = content.hero;
   const { button, pdfUrl, onlineEdition, onlineEditionLabel } = content.download;
 
   section.innerHTML = `
@@ -34,7 +49,7 @@ function renderHero() {
   `;
 }
 
-function renderProblem() {
+function renderProblem(content) {
   const section = document.getElementById('problem');
   const { eyebrow, title, body } = content.problem;
   section.innerHTML = `
@@ -50,7 +65,7 @@ function renderProblem() {
   `;
 }
 
-function renderAboutIndex() {
+function renderAboutIndex(content) {
   const section = document.getElementById('about-index');
   const { eyebrow, title, body, legendLabel } = content.aboutIndex;
   const pills = TIERS.map(tier => {
@@ -82,7 +97,7 @@ function renderAboutIndex() {
   `;
 }
 
-function renderUgcIndex() {
+function renderUgcIndex(content) {
   const { eyebrow, title, lead } = content.ugc;
   const heatmap = new Heatmap(document.getElementById('ugc'), {
     platforms,
@@ -95,7 +110,7 @@ function renderUgcIndex() {
   heatmap.render();
 }
 
-function renderAdsIndex() {
+function renderAdsIndex(content) {
   const { eyebrow, title, lead } = content.ads;
   const heatmap = new Heatmap(document.getElementById('ads'), {
     platforms,
@@ -107,7 +122,7 @@ function renderAdsIndex() {
   heatmap.render();
 }
 
-function renderFindings() {
+function renderFindings(content) {
   const section = document.getElementById('findings');
   const { eyebrow, title, items } = content.findings;
   const findingsHTML = items.map(item => `
@@ -128,7 +143,7 @@ function renderFindings() {
   `;
 }
 
-function renderRecommendations() {
+function renderRecommendations(content) {
   const section = document.getElementById('recommendations');
   const { eyebrow, title, groups } = content.recommendations;
 
@@ -165,7 +180,7 @@ function renderRecommendations() {
   initRecommendations();
 }
 
-function renderDownload() {
+function renderDownload(content) {
   const section = document.getElementById('download');
   const { eyebrow, title, button, pdfUrl, onlineEdition, onlineEditionLabel, citation, doi } = content.download;
 
@@ -207,15 +222,31 @@ function renderDownload() {
   `;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderNav();
-  renderHero();
-  renderProblem();
-  renderAboutIndex();
-  renderUgcIndex();
-  renderAdsIndex();
-  renderFindings();
-  renderRecommendations();
-  renderDownload();
+function renderAll(content) {
+  renderNav(content);
+  renderHero(content);
+  renderProblem(content);
+  renderAboutIndex(content);
+  renderUgcIndex(content);
+  renderAdsIndex(content);
+  renderFindings(content);
+  renderRecommendations(content);
+  renderDownload(content);
+}
+
+window.__setLang = async (lang) => {
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang;
+  const content = await loadContent(lang);
+  renderAll(content);
+  updateLangPill(lang);
+};
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const lang = resolveLang();
+  document.documentElement.lang = lang;
+  const content = await loadContent(lang);
+  renderAll(content);
   initNav();
+  initLangSwitcher(lang);
 });
