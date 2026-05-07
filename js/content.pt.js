@@ -13,7 +13,7 @@ export const content = {
 
   hero: {
     title: ['DATA', 'NOT', 'FOUND'],
-    subtitle: 'Transparência de Dados em Mídias Sociais para a Integridade da Informação',
+    subtitle: 'Transparência de Redes Sociais para a Integridade da Informação',
     institution: 'NetLab UFRJ & Minderoo Centre for Technology and Democracy · 2026',
     cta: 'Role para explorar',
   },
