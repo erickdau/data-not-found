@@ -74,10 +74,11 @@ function renderAboutIndex(content) {
     const swatchStyle = isNA ? '' : `background:${bg};`;
     const swatchClass = isNA ? 'tier-pill__swatch tier-pill__swatch--na' : 'tier-pill__swatch';
     const range = TIER_RANGE[tier];
+    const label = content.heatmap.tiers[tier] ?? tier;
     return `
       <div class="tier-pill">
         <div class="${swatchClass}" style="${swatchStyle}"></div>
-        <span class="tier-pill__label">${tier}${range ? `<span class="tier-pill__range">(${range})</span>` : ''}</span>
+        <span class="tier-pill__label">${label}${range ? `<span class="tier-pill__range">(${range})</span>` : ''}</span>
       </div>
     `;
   }).join('');
@@ -106,6 +107,7 @@ function renderUgcIndex(content) {
     title,
     lead,
     sectionClass: 'section--flush-top',
+    labels: content.heatmap,
   });
   heatmap.render();
 }
@@ -118,6 +120,7 @@ function renderAdsIndex(content) {
     eyebrow,
     title,
     lead,
+    labels: content.heatmap,
   });
   heatmap.render();
 }

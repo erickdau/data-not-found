@@ -165,6 +165,26 @@ export const content = {
     ],
   },
 
+  heatmap: {
+    all: 'All',
+    sortBtn: '↕ Sort by score',
+    platformCol: 'Platform',
+    footnote: '† VLOP — Very Large Online Platform, as designated under the EU\'s Digital Services Act (DSA).',
+    tiers: {
+      'Meaningful':    'Meaningful',
+      'Limited':       'Limited',
+      'Deficient':     'Deficient',
+      'Minimal':       'Minimal',
+      'Negligible':    'Negligible',
+      'Not Available': 'Not Available',
+    },
+    regions: {
+      brazil: 'Brazil',
+      eu: 'EU',
+      uk: 'UK',
+    },
+  },
+
   download: {
     eyebrow: 'Download & Cite',
     citationLabel: 'How to cite',

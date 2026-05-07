@@ -19,16 +19,7 @@ function sortAll(platforms, type) {
 }
 
 export class Heatmap {
-  /**
-   * @param {HTMLElement} container - The section element to render into
-   * @param {Object} opts
-   * @param {Array}  opts.platforms - Array of platform objects from data.js
-   * @param {'ugc'|'ads'} opts.type - Which data type to display
-   * @param {string} opts.eyebrow
-   * @param {string} opts.title
-   * @param {string} opts.lead
-   */
-  constructor(container, { platforms, type, eyebrow, title, lead, sectionClass = '' }) {
+  constructor(container, { platforms, type, eyebrow, title, lead, sectionClass = '', labels }) {
     this.container = container;
     this.platforms = platforms;
     this.type = type;
@@ -36,6 +27,7 @@ export class Heatmap {
     this.title = title;
     this.lead = lead;
     this.sectionClass = sectionClass;
+    this.labels = labels;
     this.activeRegion = 'all';
     this.sorted = true;
 
@@ -44,6 +36,7 @@ export class Heatmap {
   }
 
   render() {
+    const { all, sortBtn, platformCol, footnote, regions } = this.labels;
     this.container.innerHTML = `
       <div class="container section ${this.sectionClass}">
         <div class="section__header">
@@ -53,26 +46,26 @@ export class Heatmap {
         </div>
         <div class="heatmap-controls">
           <div class="heatmap-filter-tabs">
-            <button class="heatmap-tab active" data-region="all">All</button>
-            <button class="heatmap-tab" data-region="brazil">Brazil</button>
-            <button class="heatmap-tab" data-region="eu">EU</button>
-            <button class="heatmap-tab" data-region="uk">UK</button>
+            <button class="heatmap-tab active" data-region="all">${all}</button>
+            <button class="heatmap-tab" data-region="brazil">${regions.brazil}</button>
+            <button class="heatmap-tab" data-region="eu">${regions.eu}</button>
+            <button class="heatmap-tab" data-region="uk">${regions.uk}</button>
           </div>
-          <button class="heatmap-sort" aria-label="Sort by score">↕ Sort by score</button>
+          <button class="heatmap-sort" aria-label="${sortBtn}">${sortBtn}</button>
         </div>
         <div class="heatmap-section">
           <table class="heatmap-table">
             <thead>
               <tr>
-                <th>Platform</th>
-                <th>Brazil</th>
-                <th>EU</th>
-                <th>UK</th>
+                <th>${platformCol}</th>
+                <th>${regions.brazil}</th>
+                <th>${regions.eu}</th>
+                <th>${regions.uk}</th>
               </tr>
             </thead>
             <tbody id="${this.container.id}-tbody"></tbody>
           </table>
-          <p class="heatmap-footnote">† VLOP — Very Large Online Platform, as designated under the EU's Digital Services Act (DSA).</p>
+          <p class="heatmap-footnote">${footnote}</p>
         </div>
       </div>
     `;
@@ -94,10 +87,11 @@ export class Heatmap {
       const dimmed = this.activeRegion !== 'all' && this.activeRegion !== region ? 'dimmed' : '';
       const notAssessed = tier === 'Not Available' ? 'not-assessed' : '';
       const bgStyle = tier === 'Not Available' ? '' : `background:${bg};`;
+      const label = this.labels.tiers[tier] ?? tier;
       return `
         <td>
           <div class="tier-cell ${dimmed} ${notAssessed}" style="${bgStyle}color:${text};">
-            <span class="tier-label">${tier}</span>
+            <span class="tier-label">${label}</span>
           </div>
         </td>
       `;
@@ -124,7 +118,6 @@ export class Heatmap {
         this.container.querySelectorAll('.heatmap-tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         this.activeRegion = tab.dataset.region;
-        // Reset sort when switching regions
         if (this.sorted) {
           this.displayPlatforms = this.activeRegion === 'all'
             ? sortAll(this.assessedPlatforms, this.type)
