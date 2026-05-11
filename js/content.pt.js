@@ -30,9 +30,9 @@ export const content = {
 
   aboutIndex: {
     eyebrow: 'Sobre o Índice',
-    title: 'O Índice de Transparência de Redes Sociais',
+    title: 'O Índice de transparência de redes sociais',
     body: [
-      'Este Índice resume a primeira avaliação sistemática das condições de acesso a dados em 15 grandes plataformas de mídia social em três contextos regulatórios: a União Europeia, o Reino Unido e o Brasil. Partindo do princípio, reconhecido pelas Nações Unidas, de que a transparência depende da disponibilidade de dados de alta qualidade, o Índice avalia as plataformas com base em critérios de qualidade dos dados.',
+      'Este Índice resume a primeira avaliação sistemática das condições de acesso a dados em 15 grandes plataformas de redes sociais em três contextos regulatórios: a União Europeia, o Reino Unido e o Brasil. Partindo do princípio, reconhecido pelas Nações Unidas, de que a transparência depende da disponibilidade de dados de alta qualidade, o Índice avalia as plataformas com base em critérios de qualidade dos dados.',
       'O acesso a dados de conteúdos gerados por usuários e a dados de publicidade é avaliado separadamente, por meio de uma metodologia de código aberto fundamentada em testes empíricos. As plataformas são pontuadas em uma escala de 100 pontos, com critérios especiais correspondendo a 75% e indicadores adicionais de qualidade de dados a 25% da pontuação.',
       'Além de medir se o acesso existe, o Índice examina como e sob quais condições os dados são disponibilizados. Dados de alta qualidade são essenciais para pesquisa independente, formulação eficaz de políticas e responsabilização significativa.',
     ],
