@@ -13,27 +13,27 @@ export const content = {
 
   hero: {
     title: ['DATA', 'NOT', 'FOUND'],
-    subtitle: 'Transparência de Redes Sociais para a Integridade da Informação',
+    subtitle: 'Transparência de redes sociais para a integridade da informação',
     institution: 'NetLab UFRJ & Minderoo Centre for Technology and Democracy · 2026',
     cta: 'Role para explorar',
   },
 
   problem: {
     eyebrow: 'Visão Geral',
-    title: 'Data Not Found: Transparência de Dados em Mídias Sociais para a Integridade da Informação',
+    title: 'Data Not Found: Transparência de redes sociais para a integridade da informação',
     body: [
-      'As plataformas de mídia social estão evadindo o escrutínio público. Para avaliar as causas desse problema, pesquisadores do NetLab UFRJ (Universidade Federal do Rio de Janeiro, Brasil) e do Minderoo Centre for Technology and Democracy (Universidade de Cambridge, Reino Unido) desenvolveram o Índice de Transparência de Dados de Redes Sociais. O Índice mede as condições de acesso a dados em 15 grandes plataformas na União Europeia, no Reino Unido e no Brasil.',
-      'Nossa avaliação abrange dados públicos de conteúdo gerado por usuários e dados de publicidade. Os resultados mostram que, na maioria dos casos, o acesso significativo aos dados está sendo negado. Independentemente dos marcos regulatórios nas três regiões, a opacidade é a norma e a transparência é a exceção. A falta de transparência nos dados de conteúdo gerado por usuários e de publicidade impede o monitoramento efetivo e independente de riscos individuais e sociais. Sem acesso a dados públicos, é impossível rastrear os fluxos de desinformação que ameaçam nossas democracias. Sem acesso a dados de publicidade, os atores do mercado não conseguem tomar decisões informadas e auditáveis. O regime de opacidade das plataformas de redes sociais está, portanto, possibilitando o retrocesso democrático e a fraude financeira.',
-      'Nosso relatório recomenda ações coordenadas de múltiplos stakeholders para impor o escrutínio público sobre as plataformas de redes sociais. Essas ações incluem o estabelecimento de protocolos interoperáveis de acesso a dados e mecanismos para reduzir as disparidades regionais e de plataforma que minam a integridade global da informação.',
+      'As plataformas de redes sociais estão cada vez menos transparentes ao escrutínio público. Para compreender melhor esse cenário, pesquisadores do NetLab UFRJ (Universidade Federal do Rio de Janeiro, Brasil) e do Minderoo Centre for Technology and Democracy (Universidade de Cambridge, Reino Unido) desenvolveram o Índice de Transparência de Redes Sociais. O Índice mede as condições de acesso a dados em 15 grandes plataformas na União Europeia, no Reino Unido e no Brasil.',
+      'Nossa avaliação abrange dados públicos de conteúdos gerados por usuários e dados de publicidade. Os resultados mostram que, na maioria dos casos, o acesso significativo aos dados está sendo negado. Independentemente dos marcos regulatórios nas três regiões, a opacidade é a norma e a transparência é a exceção. A falta de transparência nos dados de conteúdos gerados por usuários e de publicidade impede o monitoramento efetivo e independente de riscos individuais e sociais. Sem acesso a dados públicos, é impossível rastrear os fluxos de desinformação que ameaçam nossas democracias. Sem acesso a dados de publicidade, os atores do mercado não conseguem tomar decisões informadas e auditáveis. O regime de opacidade das plataformas de redes sociais está, portanto, possibilitando o retrocesso democrático e a fraude financeira.',
+      'Nosso relatório propõe uma atuação coordenada de diferentes setores para ampliar o escrutínio público sobre as plataformas de redes sociais. Essas ações incluem o estabelecimento de protocolos interoperáveis de acesso a dados e mecanismos para reduzir as disparidades regionais e de plataforma que minam a integridade global da informação.',
     ],
   },
 
   aboutIndex: {
     eyebrow: 'Sobre o Índice',
-    title: 'O Índice de Transparência de Dados em Mídias Sociais',
+    title: 'O Índice de Transparência de Redes Sociais',
     body: [
-      'Este Índice resume a primeira avaliação sistemática das condições de acesso a dados em 15 grandes plataformas de mídia social em três contextos regulatórios: a União Europeia, o Reino Unido e o Brasil. Com base no princípio, reconhecido pelas Nações Unidas, de que a transparência só é significativa quando apoiada por dados de alta qualidade, o Índice avalia as plataformas usando um framework orientado pela qualidade dos dados.',
-      'O conteúdo gerado por usuários e os dados de publicidade são avaliados separadamente, por meio de uma metodologia de código aberto fundamentada em testes empíricos. As plataformas são pontuadas em uma escala de 100 pontos, com critérios especiais correspondendo a 75% e indicadores adicionais de qualidade de dados a 25% da pontuação.',
+      'Este Índice resume a primeira avaliação sistemática das condições de acesso a dados em 15 grandes plataformas de mídia social em três contextos regulatórios: a União Europeia, o Reino Unido e o Brasil. Partindo do princípio, reconhecido pelas Nações Unidas, de que a transparência depende da disponibilidade de dados de alta qualidade, o Índice avalia as plataformas com base em critérios de qualidade dos dados.',
+      'O acesso a dados de conteúdos gerados por usuários e a dados de publicidade é avaliado separadamente, por meio de uma metodologia de código aberto fundamentada em testes empíricos. As plataformas são pontuadas em uma escala de 100 pontos, com critérios especiais correspondendo a 75% e indicadores adicionais de qualidade de dados a 25% da pontuação.',
       'Além de medir se o acesso existe, o Índice examina como e sob quais condições os dados são disponibilizados. Dados de alta qualidade são essenciais para pesquisa independente, formulação eficaz de políticas e responsabilização significativa.',
     ],
     legendLabel: 'Categorias de pontuação',
@@ -41,13 +41,13 @@ export const content = {
 
   ugc: {
     eyebrow: '',
-    title: 'Índice de Transparência de Dados Gerados por Usuários',
-    lead: 'Acesso a dados públicos de conteúdo gerado por usuários em 15 plataformas e 3 regiões.',
+    title: 'Índice de transparência de dados de conteúdos gerados por usuários',
+    lead: 'Acesso a dados públicos de conteúdos gerados por usuários em 15 plataformas e 3 regiões.',
   },
 
   ads: {
     eyebrow: '',
-    title: 'Índice de Transparência em Publicidade',
+    title: 'Índice de transparência de dados em publicidade',
     lead: 'Acesso a dados de publicidade em 14 plataformas e 3 regiões. O Bluesky é excluído por não ter publicidade.',
   },
 
@@ -56,20 +56,20 @@ export const content = {
     title: 'O que os dados revelam',
     items: [
       {
-        statement: 'A transparência de dados em redes sociais permanece medíocre na UE, no Brasil e no Reino Unido.',
-        body: 'Nossos resultados mostram que serviços amplamente utilizados não fornecem mecanismos de transparência de dados — nem para conteúdo gerado por usuários (UGC) nem para publicidade, incluindo tanto interfaces de programação de aplicações (APIs) quanto interfaces gráficas de usuário (GUIs) — em nenhuma das regiões avaliadas. O Reddit, por exemplo, oferece acesso programático a dados públicos de UGC, mas não a dados de publicidade em nenhuma região avaliada. O X (antigo Twitter) oferece acesso a dados públicos de UGC, mas sujeito a planos de preços proibitivos, enquanto seu repositório de publicidade, disponível apenas na UE, não retorna resultados. A Meta oferece acesso <span style="color:#496AB1">Significativo</span> a dados de publicidade no Reino Unido, mas sua pontuação de transparência de UGC foi considerada <span style="color:#EA4E54">Insignificante</span> em todas as regiões analisadas. Plataformas como TikTok e LinkedIn oferecem, na melhor das hipóteses, transparência <span style="color:#F3CB00">Insuficiente</span> ou <span style="color:#41B5DF">Limitada</span> tanto para dados de UGC quanto de publicidade.',
+        statement: 'A transparência de dados nas plataformas de redes sociais permanece baixa na União Europeia, no Brasil e no Reino Unido.',
+        body: 'Nossos resultados mostram que serviços amplamente utilizados não oferecem mecanismos adequados de acesso a dados — seja por meio de APIs ou de interfaces gráficas — de conteúdos gerados por usuários ou de publicidade, em nenhuma das regiões avaliadas. O Reddit, por exemplo, disponibiliza acesso programático a dados de conteúdos públicos gerados por usuários, mas não oferece acesso a dados de publicidade em nenhuma região. O X (antigo Twitter) também permite o acesso a dados de conteúdos públicos gerados por usuários, porém a custos proibitivos, enquanto seu repositório de publicidade, disponível apenas na UE, não retorna resultados. Já a Meta apresenta acesso <span style="color:#496AB1">Significativo</span> a dados de publicidade no Reino Unido, mas sua transparência em relação a conteúdos gerados por usuários foi classificada como <span style="color:#EA4E54">Insignificante</span> em todas as regiões analisadas. Plataformas como TikTok e LinkedIn, por sua vez, oferecem, na melhor das hipóteses, níveis de transparência <span style="color:#F3CB00">Insuficientes</span> ou <span style="color:#41B5DF">Limitados</span> tanto para dados de conteúdos gerados por usuários quanto para dados de publicidade.',
       },
       {
-        statement: 'As disparidades no acesso a dados ao redor do mundo refletem um modelo de transparência seletiva orientado pela conformidade regulatória.',
-        body: 'As condições de transparência variam entre jurisdições, particularmente para dados de publicidade, com acesso mais robusto observado no Reino Unido e na UE, regiões com marcos regulatórios mais sólidos — ou, no caso do Reino Unido, potencialmente refletindo transbordamentos regulatórios. O Brasil, que não possui um marco dedicado à transparência de plataformas, registra consistentemente os menores níveis de acesso a dados. Em média, o Reino Unido apresenta pontuações comparativamente mais próximas às da UE.',
+        statement: 'As disparidades no acesso a dados ao redor do mundo refletem um modelo de transparência seletiva, orientado pela conformidade regulatória.',
+        body: 'As condições variam entre jurisdições — especialmente no caso dos dados de publicidade —, com níveis mais elevados de acesso no Reino Unido e na UE, onde há estruturas regulatórias mais robustas ou, no caso britânico, possíveis efeitos indiretos dessas regulações. O Brasil, por sua vez, não conta com um marco específico para a transparência das plataformas e apresenta, de forma consistente, os níveis mais baixos de acesso a dados. Em média, o Reino Unido registra resultados mais próximos aos da UE.',
       },
       {
-        statement: 'Mecanismos robustos para acesso a dados públicos de conteúdo gerado por usuários são escassos.',
-        body: "O Bluesky e o YouTube foram as únicas plataformas cujas APIs públicas foram consideradas <span style='color:#496AB1'>Significativas</span> em nossa análise, de forma consistente em todas as regiões avaliadas. Elas não diferenciam o conteúdo público que pode ser recuperado, e suas funcionalidades tiveram bom desempenho em nossos testes. O X, o Telegram e o Reddit apresentam limitações em suas APIs — notavelmente, no caso do X, os custos associados ao acesso. Os dados públicos de UGC do Facebook e Instagram só podem ser acessados por meio da Meta Content Library, cuja API é restrita a ambientes seguros e controlados e não permite a extração de dados desagregados para a infraestruturas particulares de usuários. Embora plataformas como LinkedIn e TikTok ofereçam APIs para pesquisadores no âmbito do DSA, o Pinterest e o Snapchat apenas aceitam solicitações de dados de pesquisadores, o que é considerado insuficiente sob nossa abordagem metodológica.",
+        statement: 'Mecanismos robustos de acesso a dados de conteúdos públicos gerados por usuários ainda são escassos.',
+        body: "Bluesky e YouTube foram as únicas plataformas cujas APIs públicas alcançaram, de forma consistente em todas as regiões avaliadas, um nível de acesso considerado <span style='color:#496AB1'>Significativo</span> em nossa análise. Nessas plataformas, não há restrições quanto ao tipo de conteúdo público que pode ser recuperado, e as funcionalidades disponíveis tiveram bom desempenho nos testes realizados. X, Telegram e Reddit, por sua vez, apresentam limitações em suas APIs — no caso do X, sobretudo pelos custos associados ao acesso. Já os dados de conteúdos públicos gerados por usuários do Facebook e do Instagram só podem ser acessados por meio da Biblioteca de Conteúdos da Meta, cuja API é restrita a ambientes seguros e controlados e não permite a extração de dados desagregados para a infraestrutura do próprio usuário. Embora plataformas como LinkedIn e TikTok ofereçam APIs para pesquisadores no contexto do DSA na UE, Pinterest e Snapchat operam apenas com solicitações diretas de dados por parte de pesquisadores, o que é considerado insuficiente segundo nossa abordagem metodológica.",
       },
       {
-        statement: 'As ferramentas existentes para acesso e exportação de dados de publicidade permanecem demasiado limitadas para um escrutínio significativo.',
-        body: 'A dependência de APIs e GUIs com capacidades de pesquisa limitadas, combinada com o acesso restrito a dados granulares, impede que os pesquisadores avaliem eficazmente as práticas de segmentação, o alcance da publicidade e os impactos sociais mais amplos da publicidade online. Plataformas como Meta, LinkedIn e TikTok permitem que anúncios sejam consultados usando palavras-chave, mas outras, incluindo X, Google (YouTube) e Pinterest, não permitem, limitando a descoberta e recuperação de dados a buscas baseadas em nomes de anunciantes. Além disso, as plataformas divulgam dados de alcance e segmentação em faixas de valores demasiado amplas, restringindo ainda mais tanto o escrutínio independente quanto a capacidade dos anunciantes de medir com precisão o desempenho das campanhas e o retorno sobre o investimento.',
+        statement: 'As ferramentas disponíveis para acessar e exportar dados de publicidade ainda são bastante limitadas para análises mais aprofundadas.',
+        body: 'Pesquisadores enfrentam dificuldades para avaliar de forma consistente as práticas de segmentação, o alcance dos anúncios e seus impactos sociais mais amplos, devido às limitações das APIs e interfaces gráficas, que oferecem capacidades restritas de busca e acesso limitado a dados granulares. Plataformas como Meta, LinkedIn e TikTok permitem a busca de anúncios por palavras-chave, mas outras — como X, Google (YouTube) e Pinterest — não oferecem esse recurso, restringindo a descoberta e a coleta de dados a pesquisas baseadas nos nomes dos anunciantes. Além disso, muitas plataformas divulgam dados de alcance e segmentação em faixas amplas, o que limita tanto a análise independente quanto a capacidade dos próprios anunciantes de avaliar com precisão o desempenho das campanhas e o retorno sobre o investimento.',
       },
     ],
   },
@@ -88,7 +88,7 @@ export const content = {
           },
           {
             id: 'R2',
-            title: 'Garantir acesso universal e significativo a dados públicos gerados por usuários para fins de interesse público',
+            title: 'Garantir acesso universal e significativo a dados de conteúdos públicos gerados por usuários para fins de interesse público.',
             full: 'As plataformas devem oferecer acesso gratuito, aberto e programático a dados de conteúdos públicos gerados por usuários, fora de ambientes controlados ou restritos, garantindo padrões claros de integridade e qualidade e disponibilizando esses dados por meio de APIs e interfaces gráficas que atendam a diferentes níveis de capacidade técnica. Isso é fundamental para assegurar o cumprimento das obrigações legais pelas plataformas e para que cidadãos e tomadores de decisão tenham acesso às informações essenciais de que precisam.',
           },
           {
@@ -177,8 +177,8 @@ export const content = {
     },
     regions: {
       brazil: 'Brasil',
-      eu: 'UE',
-      uk: 'RU',
+      eu: 'União Europeia',
+      uk: 'Reino Unido',
     },
   },
 
