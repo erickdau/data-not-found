@@ -190,7 +190,7 @@ export const content = {
     pdfUrl: 'https://github.com/NetLab-ECO-UFRJ/transparency_index/raw/main/report_pt.pdf',
     onlineEdition: 'https://netlab-eco-ufrj.github.io/data_not_found/',
     onlineEditionLabel: 'Edição online com metodologia',
-    citation: 'Santini, R. M., Leal, H., Salles, D., Belisário, A., Mattos, B., & Pinho, D. (2026). Data not found: Transparência de redes sociais para a integridade da informação. NetLab UFRJ e Minderoo Centre for Technology & Democracy. https://doi.org/10.17863/CAM.128975',
-    doi: 'https://doi.org/10.17863/CAM.128975',
+    citation: 'Santini, R. M., Leal, H., Salles, D., Belisário, A., Mattos, B., & Pinho, D. (2026). Data not found: Transparência de redes sociais para a integridade da informação. NetLab UFRJ e Minderoo Centre for Technology & Democracy. https://doi.org/10.5281/zenodo.20084860',
+    doi: 'https://doi.org/10.5281/zenodo.20084860',
   },
 };
